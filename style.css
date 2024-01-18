@@ -1,1 +1,6 @@
-/* untuk tes git */
+.main {
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  border: 5px solid blue;
+}

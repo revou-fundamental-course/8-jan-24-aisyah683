@@ -7,6 +7,75 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="main"></div>
+    <div class="main">
+      <div class="header">
+        <h2 align="center">Keliling dan Luas Persegi</h2>
+      </div>
+      <div class="gambar"></div>
+
+      <div class="konten">
+        <div class="keterangan">
+          <table>
+            <tr>
+              <td>Dimana :</td>
+              <td>S = Sisi</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>K = Keliling</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>L = Luas</td>
+            </tr>
+          </table>
+          <br />
+
+          <table>
+            <tr>
+              <td>Rumus :</td>
+              <td>K = S + S + S + S = 4 * S</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>L = S * S</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="proses">
+          <label for="sisi">Masukkan panjang sisi:</label>
+          <input
+            type="number"
+            id="sisi"
+            placeholder="Panjang sisi"
+            oninput="hitungKelilingDanLuas()"
+          />
+
+          <p id="hasilKeliling">Keliling : 0</p>
+          <p id="hasilLuas">Luas : 0</p>
+
+          <script>
+            function hitungKelilingDanLuas() {
+              // Mendapatkan nilai panjang sisi dari input
+              var panjangSisi = document.getElementById("sisi").value;
+
+              // Menghitung keliling persegi (K = 4 * sisi)
+              var keliling = 4 * parseFloat(panjangSisi);
+
+              // Menghitung luas persegi (L = sisi^2)
+              var luas = Math.pow(parseFloat(panjangSisi), 2);
+
+              // Menampilkan hasil keliling pada elemen dengan id "hasilKeliling"
+              document.getElementById("hasilKeliling").innerHTML =
+                "Keliling: " + keliling;
+
+              // Menampilkan hasil luas pada elemen dengan id "hasilLuas"
+              document.getElementById("hasilLuas").innerHTML = "Luas: " + luas;
+            }
+          </script>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
